@@ -363,14 +363,30 @@
             </a>
           </div>
         </li>
-      </ul>
+        </ul>
 
-      </li>
+        <ul class="footer-subscription-list">
+        <li class="footer-subscription">
+          <p class="text-social">Subscribe</p>
+
+          <div class="subscription-wrapper">
+          <form class="subscription-form">
+            
+            <input type="email" placeholder="Email" required class="subscription-input" />
+           <button type="submit" class="subscription-button">
+  <span class="button-text">Subscribe</span>
+  <svg class="icon-subscription" width="24" height="24">
+    <use href="./images/sprite.svg#icon-send"></use>
+  </svg>
+</button>
+          </form>
+        </div>
+        </li>
       </ul>
     </div>
   </footer>
 
-  <div class="backdrop is-open">
+  <div class="backdrop">
     <div class="modal">
       <button class="modal-close" type="button" width="8" height="8">&times;</button>
 
@@ -388,13 +404,13 @@
         </div>
 
         <div class="form-field">
-        <label for="phone">Phone</label>
-        <div class="input-wrapper">
-          <input type="tel" id="phone" name="phone" required />
-          <svg class="icon-input" width="12" height="12">
-            <use href="./images/sprite.svg#icon-phone"></use>
-          </svg>
-        </div>
+          <label for="phone">Phone</label>
+          <div class="input-wrapper">
+            <input type="tel" id="phone" name="phone" required />
+            <svg class="icon-input" width="12" height="12">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
         </div>
 
         <div class="form-field">
@@ -411,13 +427,19 @@
         <textarea id="message" name="message" placeholder="Text input" rows="5"></textarea>
 
         <label class="policy-label">
-          <input type="checkbox" id="privacy-policy" name="privacy-policy" required />
-          <span>
+          <input type="checkbox" id="privacy-policy" name="privacy-policy" required class="policy-checkbox" />
+
+          <span class="custom-checkbox">
+            <svg width="10" height="8">
+              <use href="./images/sprite.svg#icon-check"></use>
+            </svg>
+          </span>
+
+          <span class="policy-text">
             I accept the terms and conditions of the
             <a href="#">Privacy Policy</a>
           </span>
         </label>
-
 
         <button class="modal-submit-btn" type="submit">Send</button>
       </form>

@@ -420,7 +420,7 @@ a {
   box-shadow: 
   0px 2px 1px 0px #2E2F4214,
   0px 1px 1px 0px #2E2F4229,
-  0px 1px 6px 0px #2E2F4214;
+  0px 1px 6px 0px #2E2F4214,
 rgba(46, 47, 66, 0.16);
 }
 
@@ -696,6 +696,7 @@ rgba(46, 47, 66, 0.16);
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 250ms ease;
+  margin-top: 24px;
 }
 
 .modal-submit-btn:hover,
@@ -725,13 +726,11 @@ rgba(46, 47, 66, 0.16);
   transform: translateY(-50%);
   fill: #2E2F42;
   pointer-events: none;
-  text-indent: 6px;
 }
   
-
 .input-wrapper input {
   height: 40px;
-  
+  text-indent: 26px;
 }
 
 .icon-input {
@@ -740,4 +739,104 @@ rgba(46, 47, 66, 0.16);
 
 .input-wrapper input:focus+.icon-input {
   fill: #4d5ae5;
+}
+
+.policy-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.policy-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #8e8f99;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-checkbox svg {
+  fill: #ffffff;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-checkbox:checked+.custom-checkbox {
+  background-color: #404bbf;
+  border-color: #404bbf;
+}
+
+.policy-checkbox:checked+.custom-checkbox svg {
+  opacity: 1;
+}
+
+.policy-checkbox:focus+.custom-checkbox {
+  border-color: #4d5ae5;
+}
+
+.policy-text a {
+  color: #4d5ae5;
+  text-decoration: underline;
+}
+
+.subscription-form-wrapper {
+  display: flex;
+  margin-left: 80px;
+}
+
+.subscription-form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.subscription-form input[type="email"] {
+  width: 266px;
+  padding: 8px 12px;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px 0px #00000026;
+  background-color: #2E2F42;
+  color: #FFFFFF;
+  font-size: 12px;
+  height: 40px;
+}
+
+.subscription-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #4d5ae5;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 165px;
+  flex-shrink: 0;
+}
+
+.subscription-button svg {
+  margin-left: 16px;
+}
+
+.subscription-button:hover,
+.subscription-button:focus {
+  background-color: #31D0AA;
 }
