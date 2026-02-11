@@ -195,7 +195,10 @@ h2 {
 
 .footer .container {
   display: flex;
-  gap: 120px;
+}
+
+.footer-social-item {
+margin-left: 120px;
 }
 
 .footer ul {
@@ -587,8 +590,6 @@ rgba(46, 47, 66, 0.16);
   pointer-events: auto;
 }
 
-
-
 .modal {
   position: relative;
   width: 408px;
@@ -841,3 +842,8 @@ rgba(46, 47, 66, 0.16);
 .subscription-button:focus {
   background-color: #31D0AA;
 }
+
+.footer-list {
+  display: flex;
+}
+
